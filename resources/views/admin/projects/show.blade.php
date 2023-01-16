@@ -11,6 +11,7 @@
         <h1 class="mt-4">{{$project->title}}</h1>
         <h3>{{$project->slug}}</h3>
         <h5>{{$project->description}}</h5>
+        <h6>Type: {{ $project->type ? $project->type->name : 'Uncategorized'}}</h6>
 
 </div>
 @endsection

@@ -23,6 +23,19 @@
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
+        <div class="mb-3">
+            <label for="type_id" class="form-label">Type</label>
+            <select class="form-select form-select-lg @error('type_id') is-invalid @enderror" name="type_id" id="type_id">
+                <option selected value=''>Select one</option>
+                @foreach($types as $type)
+                <option value="{{$type->id}}" {{ $type->id == old('type_id') ? 'selected' : '' }}>{{$type->name}}</option>
+                @endforeach
+            </select>
+        </div>
+        @error('type_id')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
         <div class="form-group">
             <label for="cover_image">Cover Image</label>
             <input type="file" class="form-control" name="cover_image" id="cover_image" placeholder="Add a cover image" aria-describedby="coverImgHelper">
@@ -33,7 +46,7 @@
         @enderror
 
         <div class="mb-3">
-            <label for="description" class="form-label">Description <strong class="text-danger">*</strong></label>
+            <label for="description" class="form-label">Description</label>
             <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" rows="4" placeholder="add text">{{old('description')}}</textarea>
         </div>
 

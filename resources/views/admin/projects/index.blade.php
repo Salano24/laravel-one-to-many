@@ -45,16 +45,16 @@
                             <a href="{{route('admin.projects.show', $project->slug)}}" class="btn bg-primary"><i class="fas fa-eye fa-md text-light"></i></a>
                             <a href="{{route('admin.projects.edit', $project->slug)}}" class="btn bg-secondary my-1"><i class="fas fa-pencil fa-md text-light"></i></a>
 
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteComic-{{$project->slug}}">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteProject-{{$project->slug}}">
                                 <i class="fas fa-trash fa-md text-light"></i>
                             </button>
 
 
-                            <div class="modal fade" id="deleteComic-{{$project->slug}}" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId-{{$project->slug}}" aria-hidden="true">
+                            <div class="modal fade" id="deleteProject-{{$project->slug}}" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId-{{$project->slug}}" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="modalTitleId-{{$project->slug}}">Delete comic</h5>
+                                            <h5 class="modal-title" id="modalTitleId-{{$project->slug}}">Delete Project</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
