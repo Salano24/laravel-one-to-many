@@ -57,6 +57,12 @@
                                     Projects
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ Route::currentRouteName() === 'admin.types.index' ? 'active' : '' }}" href="{{route('admin.types.index')}}">
+                                    <span data-feather="file" class="align-text-bottom"></span>
+                                    Types
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
